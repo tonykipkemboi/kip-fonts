@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f2eb">
+  <meta name="description" content="Kip Fonts: two open-source families for headlines, charts, and small details. Try Kip Headline and Kip Gothic, then download the desktop and web fonts.">
+  <title>Kip Fonts — Type with character</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="kip-fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="./" aria-label="Kip Fonts home">Kip<span>Fonts</span><span class="brand-dot" aria-hidden="true">●</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#playground">Try the type</a>
+      <a href="https://github.com/tonykipkemboi/kip-fonts">GitHub <span aria-hidden="true">↗</span></a>
+      <a class="small-download" href="downloads/kip-fonts-v1.0.0.zip" download>Download <span aria-hidden="true">↓</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="eyebrow"><span class="dot"></span> TWO FAMILIES. FOUR STYLES. OPEN SOURCE.</div>
+      <h1 id="hero-title">A little character.<br><span>A lot to say.</span></h1>
+      <div class="hero-bottom">
+        <p>Expressive headlines. Considered details.<br>A serif and a sans, made to work together.</p>
+        <a class="button" href="downloads/kip-fonts-v1.0.0.zip" download>Get the fonts <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-meta"><span>TTF + WOFF2</span><span>VERSION 1.0.0</span><span>SIL OPEN FONT LICENSE</span></div>
+    </section>
+
+    <section id="playground" class="playground wrap" aria-labelledby="playground-title">
+      <div class="section-label"><span>01 / THE PLAYGROUND</span><h2 id="playground-title">Make yourself heard.</h2></div>
+      <div class="tester">
+        <div class="controls">
+          <div class="control family-control"><label for="font-choice">Family & weight</label><select id="font-choice">
+            <option value="headline">Kip Headline · Bold 700</option>
+            <option value="light">Kip Gothic · Light 300</option>
+            <option value="medium">Kip Gothic · Medium 500</option>
+            <option value="bold">Kip Gothic · Bold 700</option>
+          </select></div>
+          <div class="control size-control"><label for="font-size">Size <output id="size-value" for="font-size">72 px</output></label><input id="font-size" type="range" min="24" max="120" value="72"></div>
+          <button class="text-button" id="reset" type="button">Reset <span aria-hidden="true">↺</span></button>
+        </div>
+        <label class="input-label" for="sample-input">Your words</label>
+        <input id="sample-input" type="text" maxlength="240" value="Good ideas deserve good type." spellcheck="false" autocomplete="off">
+        <div class="specimen-frame"><p id="specimen" class="specimen" aria-live="polite">Good ideas deserve good type.</p></div>
+        <div class="tester-foot"><span id="font-description">Kip Headline / Bold / 700</span><span>TYPE SOMETHING ABOVE ↑</span></div>
+      </div>
+    </section>
+
+    <section id="families" class="families wrap" aria-labelledby="families-title">
+      <div class="section-label"><span>02 / THE COLLECTION</span><h2 id="families-title">Two voices. Shared purpose.</h2></div>
+      <div class="family-grid">
+        <article class="family-card headline-card">
+          <div class="card-top"><h3>Kip Headline</h3><span>700</span></div>
+          <div class="big-glyph headline" aria-hidden="true">Ag<span>&</span></div>
+          <p>A compact serif with generous personality. For the words you want people to remember.</p>
+          <div class="alphabet headline">Aa Bb Cc Dd Ee Ff Gg<br>0123456789 & ? !</div>
+          <div class="card-foot"><span>ONE DISPLAY WEIGHT</span><a href="fonts/ttf/KipHeadline-Bold.ttf" download>Download TTF <span aria-hidden="true">↓</span></a></div>
+        </article>
+        <article class="family-card gothic-card">
+          <div class="card-top"><h3>Kip Gothic</h3><span>300 / 500 / 700</span></div>
+          <div class="big-glyph gothic" aria-hidden="true">Ag<span>&</span></div>
+          <p>A condensed sans with room to breathe. Three weights and fixed-width figures for everyday detail.</p>
+          <div class="weight-samples"><span class="gothic-light">Light 300</span><span class="gothic-medium">Medium 500</span><span class="gothic-bold">Bold 700</span></div>
+          <div class="card-foot"><span>THREE SANS WEIGHTS</span><a href="downloads/kip-fonts-v1.0.0.zip" download>Download family <span aria-hidden="true">↓</span></a></div>
+        </article>
+      </div>
+      <div class="numerals"><span class="eyebrow">GOTHIC / FIXED-WIDTH FIGURES</span><p>0123456789</p><span>Steady columns. Clear comparisons.</span></div>
+    </section>
+
+    <section id="use" class="use-section wrap" aria-labelledby="use-title">
+      <div class="section-label"><span>03 / PUT THEM TO WORK</span><h2 id="use-title">Your next project starts here.</h2></div>
+      <div class="use-grid">
+        <div><span class="step">01</span><h3>On your computer</h3><p>Download the package, open the <code>fonts/ttf</code> folder, and install the four fonts. Then reopen your design app.</p><a class="inline-link" href="downloads/kip-fonts-v1.0.0.zip" download>Download v1.0.0 <span aria-hidden="true">↗</span></a></div>
+        <div><span class="step">02</span><h3>On the web</h3><p>Add the stylesheet below, then use <code>"Kip Headline"</code> at weight 700 or <code>"Kip Gothic"</code> at 300, 500, or 700.</p><a class="inline-link" href="https://github.com/tonykipkemboi/kip-fonts#use-on-a-website">Read the usage guide <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="code-panel"><div class="code-top"><span>ADD TO YOUR HTML &lt;HEAD&gt;</span><button id="copy-css" type="button">Copy code</button></div><pre><code id="embed-code">&lt;link rel="stylesheet" href="https://tonykipkemboi.github.io/kip-fonts/kip-fonts.css"&gt;</code></pre><p id="copy-status" role="status" aria-live="polite"></p></div>
+      <p class="hosting-note">The hosted CSS serves the latest version. For a fixed release, download the package and self-host the WOFF2 files with their licenses.</p>
+    </section>
+
+    <section class="about wrap" aria-labelledby="about-title">
+      <div class="section-label"><span>04 / BUILT ON OPEN SOURCE</span><h2 id="about-title">Good type is a shared effort.</h2></div>
+      <div class="about-body"><p>Kip Fonts is a collection of independent adaptations by <a href="https://tonykipkemboi.com">Tony Kipkemboi</a>. Kip Headline builds on <a href="https://github.com/undercasetype/Fraunces">Fraunces</a>; Kip Gothic builds on <a href="https://github.com/googlefonts/Libre-Franklin">Libre Franklin</a>. The original designers’ work makes this possible.</p><p>The fonts are free to use, modify, and share under the SIL Open Font License 1.1. When sharing or self-hosting the font files, include the original copyright and license notices. The complete download includes them.</p></div>
+      <div class="license-links"><a href="licenses/OFL-Fraunces.txt">Headline license ↗</a><a href="licenses/OFL-LibreFranklin.txt">Gothic license ↗</a><a href="https://github.com/tonykipkemboi/kip-fonts/blob/main/SOURCES.md">Sources & modifications ↗</a><a href="https://github.com/tonykipkemboi/kip-fonts/issues">Report an issue ↗</a></div>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><a class="wordmark" href="./">Kip<span>Fonts</span><span class="brand-dot" aria-hidden="true">●</span></a><p>Made to be used. Free to be shared.</p><a href="https://github.com/tonykipkemboi/kip-fonts">Find us on GitHub ↗</a></footer>
+</body>
+</html>

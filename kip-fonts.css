@@ -1,0 +1,31 @@
+/* Kip Fonts v1.0.0 — SIL Open Font License 1.1.
+   Copyright and license notices: ./licenses/ and ./SOURCES.md.
+   Download the complete package before redistributing or self-hosting. */
+@font-face {
+  font-family: 'Kip Headline';
+  src: url('./fonts/woff2/KipHeadline-Bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kip Gothic';
+  src: url('./fonts/woff2/KipGothic-Light.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kip Gothic';
+  src: url('./fonts/woff2/KipGothic-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kip Gothic';
+  src: url('./fonts/woff2/KipGothic-Bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
