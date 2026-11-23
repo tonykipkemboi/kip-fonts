@@ -7,7 +7,6 @@ const stage = document.querySelector('#headline-stage');
 const headline = document.querySelector('#headline-sample');
 const closer = document.querySelector('#closer');
 const gothic = document.querySelector('#gothic-sample');
-const rollButton = document.querySelector('#roll');
 const figureRoot = document.querySelector('#figures');
 const easeOut = 'cubic-bezier(0.23, 1, 0.32, 1)';
 const easeInOut = 'cubic-bezier(0.77, 0, 0.175, 1)';
@@ -18,11 +17,9 @@ let rollAnimations = [];
 let ghost = null;
 let closeWanted = false;
 let closeVisible = false;
-let figuresWanted = true;
 let figuresVisible = false;
 let staticZoom = false;
 let closeHasRun = false;
-let figuresHaveRun = false;
 
 function animate(element, frames, options) {
   const animation = element.animate(frames, options);
@@ -89,7 +86,6 @@ function stopFigures() {
 
 function startFigures() {
   if (rollAnimations.length) return;
-  figuresHaveRun = true;
   // The first and last digits match, so the loop returns without a visual jump.
   rollAnimations = strips.map((strip, index) => animate(strip, [
     { transform: 'translateY(0)', offset: 0 },
@@ -103,9 +99,6 @@ function updateLabels() {
   const studying = closeWanted && motionEnabled;
   closer.textContent = staticZoom ? 'Return to the line' : studying ? 'Pause close-up' : closeHasRun ? 'Resume close-up' : 'Look closer';
   closer.setAttribute('aria-pressed', String(studying || staticZoom));
-  const rolling = figuresWanted && motionEnabled;
-  rollButton.textContent = !motionEnabled ? 'About these figures' : rolling ? 'Pause figures' : figuresHaveRun ? 'Resume figures' : 'Play figures';
-  rollButton.setAttribute('aria-pressed', String(rolling));
   motionButton.textContent = motionEnabled ? 'Motion on' : 'Motion off';
   motionButton.setAttribute('aria-pressed', String(motionEnabled));
   document.body.dataset.motion = motionEnabled ? 'on' : 'off';
@@ -115,7 +108,7 @@ function syncMotion() {
   const canPlay = motionEnabled && !document.hidden;
   if (canPlay && closeWanted && closeVisible) startClose();
   else if (closeAnimation) stopClose();
-  if (canPlay && figuresWanted && figuresVisible) startFigures();
+  if (canPlay && figuresVisible) startFigures();
   else stopFigures();
   updateLabels();
 }
@@ -152,15 +145,6 @@ closer.addEventListener('click', event => {
   } else {
     closeWanted = true;
   }
-  syncMotion();
-});
-
-rollButton.addEventListener('click', () => {
-  if (!motionEnabled) {
-    status.textContent = 'Each digit has the same width, so changing a number keeps its column aligned.';
-    return;
-  }
-  figuresWanted = !figuresWanted;
   syncMotion();
 });
 

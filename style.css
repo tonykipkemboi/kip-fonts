@@ -57,7 +57,6 @@ h1 { font-size: clamp(30px, 2.92vw, 42px); line-height: 1.143; letter-spacing: -
 .digit-strip { display: flex; flex-direction: column; }
 .digit-strip span { display: block; height: 1.2em; line-height: 1.2; flex-shrink: 0; }
 .figure-note { display: flex; flex-direction: column; gap: 2px; font-size: 16px; line-height: 24px; color: var(--muted); }
-.figure-note button { align-self: flex-start; font-weight: 500; }
 footer { border-top: 1px solid var(--rule); margin: 4px var(--gutter) 0; padding: 28px 0 34px; display: flex; align-items: center; justify-content: space-between; gap: 24px; color: var(--muted); font-size: 16px; line-height: 24px; }
 footer > div { display: flex; gap: 28px; align-items: center; }
 footer > div { flex-wrap: wrap; }
@@ -102,7 +101,6 @@ footer button { white-space: nowrap; }
   .figures-row { flex-direction: column; align-items: flex-start; gap: 14px; padding: 6px 0 8px; }
   .figures { font-size: clamp(36px, 10vw, 58px); width: 100%; }
   .figure-note { flex-direction: row; justify-content: space-between; align-items: center; gap: 20px; width: 100%; font-size: 14px; line-height: 21px; }
-  .figure-note button { align-self: center; white-space: nowrap; }
   footer { flex-direction: column; align-items: stretch; padding-top: 24px; gap: 12px; }
   footer > div { justify-content: space-between; gap: 16px; }
 }
