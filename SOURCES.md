@@ -2,11 +2,13 @@
 
 ## Kip Headline
 
-- Upstream: [Fraunces](https://github.com/undercasetype/Fraunces).
-- Copyright notice in the supplied upstream license: Copyright 2018 The Fraunces Project Authors.
-- Copyright notice in the supplied font metadata: Copyright 2020 The Fraunces Project Authors. Both original notices are retained.
-- License: [SIL OFL 1.1](licenses/OFL-Fraunces.txt).
-- Adaptation notes supplied by the font author: static cut from weight 774 at optical size 72, horizontal outline scaling of 0.89, renamed Kip Headline, exported at nominal weight 700.
+- Upstream: [Hahmlet](https://github.com/hyper-type/hahmlet).
+- Copyright 2020 The Hahmlet Project Authors.
+- License: [SIL OFL 1.1](licenses/OFL-Hahmlet.txt).
+- Adaptation notes supplied by the font author: Latin subset, static source weight 820, lowercase horizontal scale 0.82, capital horizontal scale 0.88, lowercase height reduced by 11 percent, capital height increased by 2 percent, letter spacing tightened by 10 units, and word space reduced by 10 percent. Renamed Kip Headline and exported at nominal weight 700.
+- These adjustments apply to classes of letters. This release contains the tuned open-source font, with no image-traced replacement glyphs.
+
+Kip Headline in [v1.0.0](https://github.com/tonykipkemboi/kip-fonts/releases/tag/v1.0.0) was based on Fraunces. The earlier release and its original notices remain available there. The Hahmlet-based font has different outlines, spacing, and character coverage, so check existing layouts when upgrading.
 
 ## Kip Gothic
 
@@ -27,4 +29,4 @@ Nominal weights are 300, 500, and 700. All ten digit advances were checked and a
 
 Adaptations and distribution by Tony Kipkemboi, 2026. Original authors retain their copyright. The release preserves the four supplied static TTF files byte for byte, including their copyright and license metadata. No third-party chart images are required to use the fonts or included in this distribution.
 
-The WOFF2 build uses the checked-in TTF files and preserves the font family, style, metrics, character mappings, and copyright/license records. CSS explicitly maps the four available weights. Each download includes both upstream license texts.
+The WOFF2 build uses the checked-in TTF files and preserves the font family, style, metrics, character mappings, and copyright/license records. CSS explicitly maps the four available weights. Each current download includes the Hahmlet and Libre Franklin license texts.

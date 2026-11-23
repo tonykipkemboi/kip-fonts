@@ -1,8 +1,8 @@
 # Kip Fonts
 
-Two open-source font families for headlines, charts, and small details. Adapted by Tony Kipkemboi from **Fraunces** and **Libre Franklin**.
+Two open-source font families for headlines, charts, and small details. Adapted by Tony Kipkemboi from **Hahmlet** and **Libre Franklin**.
 
-**[Try the fonts](https://tonykipkemboi.github.io/kip-fonts/)** · **[Download v1.0.0](https://tonykipkemboi.github.io/kip-fonts/downloads/kip-fonts-v1.0.0.zip)**
+**[Try the fonts](https://tonykipkemboi.github.io/kip-fonts/)** · **[Download v1.1.0](https://tonykipkemboi.github.io/kip-fonts/downloads/kip-fonts-v1.1.0.zip)**
 
 | Family | Style | CSS weight | Formats |
 | --- | --- | --- | --- |
@@ -11,7 +11,7 @@ Two open-source font families for headlines, charts, and small details. Adapted 
 | Kip Gothic | Medium | 500 | TTF, WOFF2 |
 | Kip Gothic | Bold | 700 | TTF, WOFF2 |
 
-Kip Headline is a compact, high-contrast serif for display text. Kip Gothic is a condensed sans with adjusted spacing and fixed-width numerals. These are independent adaptations of the credited open-source families. They are not official versions of any publisher's typefaces. This is an initial release; please report rendering or spacing issues on GitHub.
+Kip Headline is a compact, high-contrast serif for display text. Kip Gothic is a condensed sans with adjusted spacing and fixed-width numerals. These are independent adaptations of the credited open-source families. They are not official versions of any publisher's typefaces. Please report rendering or spacing issues on GitHub.
 
 ## Use on a website
 
@@ -71,7 +71,7 @@ The serif and sans have different character coverage. The current fonts have bee
 
 ## License
 
-Fonts: **SIL Open Font License 1.1**, including modified and redistributed font files. Preserve the original copyright notices and license texts. See [Fraunces license](licenses/OFL-Fraunces.txt) and [Libre Franklin license](licenses/OFL-LibreFranklin.txt). The OFL permits personal and commercial use; font files cannot be sold by themselves. Documents and artwork made with these fonts do not have to use the OFL.
+Fonts: **SIL Open Font License 1.1**, including modified and redistributed font files. Preserve the original copyright notices and license texts. See [Hahmlet license](licenses/OFL-Hahmlet.txt) and [Libre Franklin license](licenses/OFL-LibreFranklin.txt). The OFL permits personal and commercial use; font files cannot be sold by themselves. Documents and artwork made with these fonts do not have to use the OFL.
 
 Website and packaging code: [MIT](LICENSE-CODE).
 

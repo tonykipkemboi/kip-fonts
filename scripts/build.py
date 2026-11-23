@@ -6,7 +6,7 @@ import json
 from fontTools.ttLib import TTFont
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '1.0.0'
+VERSION = '1.1.0'
 NAMES = ['KipHeadline-Bold', 'KipGothic-Light', 'KipGothic-Medium', 'KipGothic-Bold']
 
 def sha(path):
@@ -19,6 +19,9 @@ def main():
         ttf = ROOT / f'fonts/ttf/{name}.ttf'
         font = TTFont(ttf, recalcTimestamp=False)
         assert 'fvar' not in font, f'{name} must be a static font'
+        metadata = ' '.join(font['name'].getDebugName(field) or '' for field in [0, 1, 2, 6, 13]).lower()
+        if 'headline trace' in metadata or 'not for redistribution' in metadata:
+            raise ValueError(f'{name}: assignment-only fonts must not enter the public release')
         font.flavor = 'woff2'
         woff = ROOT / f'fonts/woff2/{name}.woff2'
         font.save(woff)
@@ -29,8 +32,10 @@ def main():
         for field in [0, 1, 2, 6, 13, 14]:
             assert restored['name'].getDebugName(field) == font['name'].getDebugName(field)
 
-    paths = sorted([*ROOT.glob('fonts/ttf/*.ttf'), *ROOT.glob('fonts/woff2/*.woff2'),
-                    *ROOT.glob('licenses/*.txt'), ROOT/'README.md', ROOT/'SOURCES.md',
+    paths = sorted([*(ROOT/f'fonts/ttf/{name}.ttf' for name in NAMES),
+                    *(ROOT/f'fonts/woff2/{name}.woff2' for name in NAMES),
+                    ROOT/'licenses/OFL-Hahmlet.txt', ROOT/'licenses/OFL-LibreFranklin.txt',
+                    ROOT/'README.md', ROOT/'SOURCES.md', ROOT/'CHANGELOG.md',
                     ROOT/'LICENSE', ROOT/'LICENSE-CODE', ROOT/'kip-fonts.css'])
     manifest = {str(p.relative_to(ROOT)): sha(p) for p in paths}
     (ROOT/'SHA256SUMS.json').write_text(json.dumps(manifest, indent=2)+'\n')
